@@ -13,6 +13,7 @@ Har stött på problem med att TT-Motorn tjuter utan att köra, och har påbörj
 Ellära och beräkningar. Det gick bra
 
 ## Tisdag 24/3 (12.05-16.10)
-Bilen.
+Bilen, den lever och kan köra! Testade koppla in den i en powerbank för att styra genom MaQiaTTo:s WebSocketClient och är glad
+att se att bilen svarar på MQTT-kommandon som den ska. Det finns förstås mycket att ändra på MQTT-sidan och jag har ännu inte riktigt börjat på hemsidan, men det här är en bra början!
 
 -------------
