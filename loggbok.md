@@ -17,3 +17,8 @@ Bilen, den lever och kan köra! Testade koppla in den i en powerbank för att st
 att se att bilen svarar på MQTT-kommandon som den ska. Det finns förstås mycket att ändra på MQTT-sidan och jag har ännu inte riktigt börjat på hemsidan, men det här är en bra början!
 
 -------------
+
+## Fredag 27/3 (12.55-15.00)
+Jag har jobbat med att försöka fixa ett eget sätt att skicka mqtt-värden. Jag har mest läst på om hur man gör och har bara börjat lite med tester.
+
+-------------
