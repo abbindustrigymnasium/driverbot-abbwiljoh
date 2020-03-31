@@ -22,3 +22,12 @@ att se att bilen svarar på MQTT-kommandon som den ska. Det finns förstås myck
 Jag har jobbat med att försöka fixa ett eget sätt att skicka mqtt-värden. Jag har mest läst på om hur man gör och har bara börjat lite med tester.
 
 -------------
+
+## Måndag 30/3 (12.05-14.15)
+Har gjort fortsättnigen på räkneuppgifterna enligt Kirchhoffs ström- och spänningslagar och om seriekopplade motstånd. Det gick bra, blev klar tidigt så jag fortsatte jobba på bilen. Då jag inte känner mig jättesäker på Vue och MQTT genom javascript hade jag börjaat kolla på en klient till Python (Paho MQTT), och nu har jag en fungerande klient som kan styra bilen med ett enkelt python-script.
+
+-------------
+
+## Tisdag 31/3 (9.50-10.55)
+
+-------------
