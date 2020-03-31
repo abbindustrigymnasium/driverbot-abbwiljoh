@@ -29,6 +29,8 @@ Jag har jobbat med att försöka fixa ett eget sätt att skicka mqtt-värden. Ja
 
 ## Måndag 30/3 (12.05-14.15)
 Har gjort fortsättnigen på räkneuppgifterna enligt Kirchhoffs ström- och spänningslagar och om seriekopplade motstånd. Det gick bra, blev klar tidigt så jag fortsatte jobba på bilen. Då jag inte känner mig jättesäker på Vue och MQTT genom javascript hade jag börjaat kolla på en klient till Python (Paho MQTT), och nu har jag en fungerande klient som kan styra bilen med ett enkelt python-script.
+ 
+ ###### [Kod finns här](https://github.com/abbindustrigymnasium/driverbot-abbwiljoh/tree/master/loggbok-exempel/python-mqtt-test "Test-kod")
 
 -------------
 
