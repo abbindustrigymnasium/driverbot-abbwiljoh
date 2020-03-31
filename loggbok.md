@@ -35,7 +35,7 @@ Har gjort fortsättnigen på räkneuppgifterna enligt Kirchhoffs ström- och sp�
 -------------
 
 ## Tisdag 31/3 (9.50-10.55)
-Har uppdaterat GitHuben, lagt till kod, fixat lite bilder och annat smått och gott. Måste tacka Adam Pritchard för sin [`Markdown Cheatsheet`](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#lists "Fusklapp för markdown"). Jag har också planerat vad jag vill göra med bilen, och jag vill försöka bygga en sida med python för att utmana mig själv (och för att försöka undvika js så mycket som möjligt). Jag känner mig inte riktigt klar med programmeringsprojektet så jag har planerat vad för sorts gobitar jag vill lägga till.
+Har uppdaterat GitHuben, lagt till kod, fixat lite bilder och annat smått och gott. Måste tacka Adam Pritchard för sin [`Markdown Cheatsheet`](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#lists "Fusklapp för markdown"). Jag har också planerat vad jag vill göra med bilen, och jag ska fortsätta och försöka överföra dessa kunskaper till hemsidan jag ska försöka göra. Jag känner mig inte riktigt klar med programmeringsprojektet så jag har planerat vad för sorts gobitar jag vill lägga till.
 
 -------------
 
