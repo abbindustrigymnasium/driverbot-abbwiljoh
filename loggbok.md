@@ -1,6 +1,10 @@
 # LOGGBOK TEKNIK DISTANSSTUDIER
 #### William Johansson
 
+Bilen i sitt tidiga stadie: 
+![alt-text](https://github.com/abbindustrigymnasium/driverbot-abbwiljoh/blob/master/loggbok-exempel/BilBild.jpg "Williams Bild")
+
+
 -------------
 
 ## Måndag 23/3 (12.05-16.10)
