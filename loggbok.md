@@ -49,4 +49,4 @@ Laddat upp Python-projektet på GitHuben (med kommentarer). Har arbetat med lite
 
 ---
 
-![alt-text](https://tenor.com/view/homer-simpson-dancing-the-simpsons-gif-13604455 "Cool Dans")
+[alt-text](https://tenor.com/view/homer-simpson-dancing-the-simpsons-gif-13604455 "Cool Dans")
