@@ -48,5 +48,3 @@ Har jobbat med programmeringsprojektet. Känner mig relativt klar med mitt proje
 Laddat upp Python-projektet på GitHuben (med kommentarer). Har arbetat med lite roliga metoder att styra på, utöver själva hemsidan, då jag vill ha lite olika alternativ för styrning.
 
 ---
-
-[alt-text](https://tenor.com/view/homer-simpson-dancing-the-simpsons-gif-13604455 "Cool Dans")
