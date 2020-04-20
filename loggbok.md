@@ -43,3 +43,8 @@ Har uppdaterat GitHuben, lagt till kod, fixat lite bilder och annat smått och g
 Har jobbat med programmeringsprojektet. Känner mig relativt klar med mitt projekt, och har dessutom kommenterat all kod i projektet. Bilen har inte fått lika mycket uppmärksamhet idag, men jag har kikat lite på koden för att se vad för egenheter jag vill lägga till.
 
 ---
+
+## Måndag 20/4 (8.10-9.30, 12.05-16.10)
+Laddat upp Python-projektet på GitHuben (med kommentarer). Har arbetat med lite roliga metoder att styra på, utöver själva hemsidan, då jag vill ha lite olika alternativ för styrning.
+
+---
