@@ -48,3 +48,5 @@ Har jobbat med programmeringsprojektet. Känner mig relativt klar med mitt proje
 Laddat upp Python-projektet på GitHuben (med kommentarer). Har arbetat med lite roliga metoder att styra på, utöver själva hemsidan, då jag vill ha lite olika alternativ för styrning.
 
 ---
+## Tisdag 21/4 (14.35-16.10)
+Har läst dokumentation för att bli bättre på frontend-sidan. Har också på sidan experimenterat med styrning via ett spel eller liknande för att få lite roliga alternativ för styrning.
