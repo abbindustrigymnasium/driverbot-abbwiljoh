@@ -50,3 +50,11 @@ Laddat upp Python-projektet på GitHuben (med kommentarer). Har arbetat med lite
 ---
 ## Tisdag 21/4 (14.35-16.10)
 Har läst dokumentation för att bli bättre på frontend-sidan. Har också på sidan experimenterat med styrning via ett spel eller liknande för att få lite roliga alternativ för styrning.
+
+---
+
+## Tisdag 28/4 (12.05-16.10)
+Vi hade ttf på morgonen så jag tog mig lite tid att leka lite med programmeringen och gjorde sedan på eftermiddagagen klart ett spel där man kan styra bilen med piltangenterna. Det var en sidoidé jag kom på någon gång på fritiden om det skulle visa sig att vue-projektet blev dåligt. Den finns [här](https://github.com/abbindustrigymnasium/driverbot-abbwiljoh/tree/master/python-control "pygame-car").
+Annars har jag arbetat med vue, som jag fortfarande inte känner mig helt säker på, men jag blir bättre för varje lektionjag jobbar med det!
+
+---
