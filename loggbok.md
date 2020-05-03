@@ -2,7 +2,7 @@
 #### William Johansson
 
 Bilen i sitt tidiga stadie: 
-![alt-text](https://github.com/abbindustrigymnasium/driverbot-abbwiljoh/blob/master/loggbok-exempel/BilBild.jpg "Williams Bild")
+![alt-text](https://github.com/abbindustrigymnasium/driverbot-abbwiljoh/blob/master/loggbok-exempel/BilBildCropped.png "Williams Bild")
 
 
 -------------
