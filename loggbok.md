@@ -58,3 +58,11 @@ Vi hade ttf på morgonen så jag tog mig lite tid att leka lite med programmerin
 Annars har jag arbetat med vue, som jag fortfarande inte känner mig helt säker på, men jag blir bättre för varje lektionjag jobbar med det!
 
 ---
+
+## Måndag 11/5 (8.10-9.30)
+Har jobbat med Pytho-projektet, försökt snygga till GitHuben och readme:n. Projektet är nu slutfört, det finns en video och repository för projektet som kan hittas [här](https://github.com/abbindustrigymnasium/programmering-1-miniprojekt-abbwiljoh "programmering-1-miniprojekt-abbwiljoh")
+
+## Månadg 11/5 (12.05-16.10)
+
+
+---
