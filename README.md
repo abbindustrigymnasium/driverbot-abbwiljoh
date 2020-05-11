@@ -2,6 +2,7 @@
 
 #### Innehåll:
    * [Kod för bil](https://github.com/abbindustrigymnasium/driverbot-abbwiljoh "Länken finns inte än!")
+      - [Python-stryning](https://github.com/abbindustrigymnasium/driverbot-abbwiljoh/blob/master/python-control/pygame_car.py "pygame_car.py")
    * [Loggbok för lektionerna](https://github.com/abbindustrigymnasium/driverbot-abbwiljoh/blob/master/loggbok.md "Loggbok")
 
 
