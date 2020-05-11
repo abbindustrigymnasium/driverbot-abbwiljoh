@@ -63,6 +63,7 @@ Annars har jag arbetat med vue, som jag fortfarande inte känner mig helt säker
 Har jobbat med Pytho-projektet, försökt snygga till GitHuben och readme:n. Projektet är nu slutfört, det finns en video och repository för projektet som kan hittas [här](https://github.com/abbindustrigymnasium/programmering-1-miniprojekt-abbwiljoh "programmering-1-miniprojekt-abbwiljoh")
 
 ## Månadg 11/5 (12.05-16.10)
-Jag har tyckt att den kod som finns i kodbanken är adekvat, och jag har hittills bara gjort små kosmetiska ändringar av just den anledningen. Däremot finns det saker jag känner kan läggas till, som att loggern så att den tar MQTT-värden från bilen, vilket är något jag har hållit på med idag. Arduinokoden har uppdaterats att skicka en uppdatering till hemsidan varje gång något ändras. Jag har också fixat ett problem som uppstod då servot var uppochned. Det var lätt att bara byta plats på "directions"-variabeln i Arduinokoden för mer hållbar styrning.
+Jag har tyckt att den kod som finns i kodbanken är adekvat, och jag har hittills bara gjort små kosmetiska ändringar av just den anledningen. Däremot finns det saker jag känner kan läggas till, som att loggern så att den tar MQTT-värden från bilen, vilket är något jag har hållit på med idag. Arduinokoden har uppdaterats att skicka en uppdatering till hemsidan varje gång något ändras. Jag har också fixat ett problem som uppstod då servot var uppochned. Det var lätt att bara byta plats på "directions"-variabeln i Arduinokoden för mer hållbar styrning. 
+Har läst och försökt få meddelanden först och främst att visas på loggern, men också hitta var jag ska sätta funktionen för att få uppdaterade meddelanden, men jag har en idé jag tänker testa nästa gång jag har tid.
 
 ---
