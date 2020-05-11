@@ -4,6 +4,7 @@
    * Kod för bil
    
       - [Python-stryning](https://github.com/abbindustrigymnasium/driverbot-abbwiljoh/blob/master/python-control/pygame_car.py "pygame_car.py")
+           * [Python Test](https://github.com/abbindustrigymnasium/driverbot-abbwiljoh/tree/master/loggbok-exempel/python-mqtt-test "Test-kod")
       
       - [Vue-styrning](https://github.com/abbindustrigymnasium/driverbot-abbwiljoh/tree/master/vue "vue")
       
