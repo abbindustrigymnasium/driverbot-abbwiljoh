@@ -23,7 +23,7 @@ print('Use arrowkeys to control car. SPACE to brake.\n ESC to exit')
 class Player(pygame.sprite.Sprite):
     def __init__(self):
         super(Player, self).__init__()
-        self.surf = pygame.image.load('pygame-mqtt-test/red_circle.png').convert()
+        self.surf = pygame.image.load('python-control/red_circle.png').convert()
         self.surf.set_colorkey((255,255,255), RLEACCEL)
         self.rect = self.surf.get_rect()
         self.rect.center = (SCREEN_WIDTH/2, SCREEN_HEIGHT/2)
@@ -40,11 +40,11 @@ class Player(pygame.sprite.Sprite):
         if pressed_keys[K_LEFT]:
             self.rect.center = (SCREEN_WIDTH/2, SCREEN_HEIGHT/2)
             self.rect.center = (SCREEN_WIDTH/2-50, SCREEN_HEIGHT/2)
-            m.publish(msg='r90')
+            m.publish(msg='l90')
         if pressed_keys[K_RIGHT]:
             self.rect.center = (SCREEN_WIDTH/2, SCREEN_HEIGHT/2)
             self.rect.center = (SCREEN_WIDTH/2 + 50, SCREEN_HEIGHT/2)
-            m.publish(msg='l90')
+            m.publish(msg='r90')
         if pressed_keys[K_SPACE]:
             self.rect.center = (SCREEN_WIDTH/2, SCREEN_HEIGHT/2)
             log = 'Stannad'

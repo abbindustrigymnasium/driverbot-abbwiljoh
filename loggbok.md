@@ -55,12 +55,12 @@ Har läst dokumentation för att bli bättre på frontend-sidan. Har också på 
 
 ## Tisdag 28/4 (12.05-16.10)
 Vi hade ttf på morgonen så jag tog mig lite tid att leka lite med programmeringen och gjorde sedan på eftermiddagagen klart ett spel där man kan styra bilen med piltangenterna. Det var en sidoidé jag kom på någon gång på fritiden om det skulle visa sig att vue-projektet blev dåligt. Den finns [här](https://github.com/abbindustrigymnasium/driverbot-abbwiljoh/tree/master/python-control "pygame-car").
-Annars har jag arbetat med vue, som jag fortfarande inte känner mig helt säker på, men jag blir bättre för varje lektionjag jobbar med det!
+Annars har jag arbetat mycket med vue, som jag fortfarande inte känner mig helt säker på, men jag blir bättre för varje lektion jag jobbar med det!
 
 ---
 
 ## Måndag 11/5 (8.10-9.30)
-Har jobbat med Pytho-projektet, försökt snygga till GitHuben och readme:n. Projektet är nu slutfört, det finns en video och repository för projektet som kan hittas [här](https://github.com/abbindustrigymnasium/programmering-1-miniprojekt-abbwiljoh "programmering-1-miniprojekt-abbwiljoh")
+Har jobbat med Pytho-projektet, försökt snygga till GitHuben och readme:n. Projektet är nu slutfört, det finns en video och repository för projektet som kan hittas [här](https://github.com/abbindustrigymnasium/programmering-1-miniprojekt-abbwiljoh "programmering-1-miniprojekt-abbwiljoh").
 
 ## Månadg 11/5 (12.05-16.10)
 
