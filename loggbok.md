@@ -67,3 +67,9 @@ Jag har tyckt att den kod som finns i kodbanken är adekvat, och jag har hittill
 Har läst och försökt få meddelanden först och främst att visas på loggern, men också hitta var jag ska sätta funktionen för att få uppdaterade meddelanden, men jag har en idé jag tänker testa nästa gång jag har tid.
 
 ---
+
+## Tisdag 12/5 (12.05-16.10)
+Har jobbat med beräkningar och ellära. Fortsättningen på Kirchhoffs och Ohms äventyr!
+
+---
+
