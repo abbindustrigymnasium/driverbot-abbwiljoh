@@ -4,8 +4,8 @@
     <v-card class="elevation-12" color="grey lighten-1">
       <v-layout row>
         <v-flex class="justify-center mb-6">
-          <v-btn class="ma-2" v-if="connected" tile color="red" icon @click="speed=500">
-            50
+          <v-btn class="ma-2" v-if="connected" tile color="red" icon @click="speed=850">
+            85
             <v-icon>directions_car</v-icon>
           </v-btn>
           <v-btn
@@ -15,13 +15,13 @@
             color="teal"
             icon
             :disabled="!connected"
-            @click="Send('direction','f'+speed)"
+            @click="Send('direction','f'+speed); SubscribeLog('direction');"
           >
             <v-icon>keyboard_arrow_up</v-icon>
           </v-btn>
 
-          <v-btn class="ma-2" tile v-if="connected" color="blue" icon @click="speed=700">
-            70
+          <v-btn class="ma-2" tile v-if="connected" color="blue" icon @click="speed=900">
+            90
             <v-icon>directions_car</v-icon>
           </v-btn>
         </v-flex>
@@ -35,7 +35,7 @@
             color="teal"
             icon
             :disabled="!connected"
-            @click="Send('direction','l90')"
+            @click="Send('direction','l90'); SubscribeLog('direction');"
           >
             <v-icon>keyboard_arrow_left</v-icon>
           </v-btn>
@@ -45,7 +45,7 @@
           <v-btn v-if="!connected" class="ma-2" tile large :color="car" icon @click="Connect()">
             <v-icon>directions_car</v-icon>
           </v-btn>
-          <v-btn v-else class="ma-2" tile large :color="car" icon @click="Send('direction','f0')">
+          <v-btn v-else class="ma-2" tile large :color="car" icon @click="Send('direction','f0'); SubscribeLog('direction');">
             <v-icon>pause</v-icon>
           </v-btn>
         </v-flex>
@@ -57,7 +57,7 @@
             color="teal"
             icon
             :disabled="!connected"
-            @click="Send('direction','r90')"
+            @click="Send('direction','r90'); SubscribeLog('direction');"
           >
             <v-icon>keyboard_arrow_right</v-icon>
           </v-btn>
@@ -65,8 +65,8 @@
       </v-layout>
       <v-layout row>
         <v-flex class="justify-center mb-6">
-          <v-btn class="ma-2" v-if="connected" tile color="green" icon @click="speed=800">
-            80
+          <v-btn class="ma-2" v-if="connected" tile color="green" icon @click="speed=950">
+            95
             <v-icon>directions_car</v-icon>
           </v-btn>
           <v-btn
@@ -76,7 +76,7 @@
             color="teal"
             icon
             :disabled="!connected"
-            @click="Send('direction','b'+speed)"
+            @click="Send('direction','b'+speed); SubscribeLog('direction');"
           >
             <v-icon>keyboard_arrow_down</v-icon>
           </v-btn>
@@ -188,12 +188,18 @@ export default {
     Send(adress, message) {
       // console.log(message);
       this.client.publish(
-        this.options.username + "/" + adress, //Exempel         "joakim.flink@abbindustrigymnasium.se"+"/" + "drive",
+        this.options.username + "/" + adress,
         message
       );
 
-      this.$store.dispatch("addToLogger", message);
-    }
+      // this.$store.dispatch("addToLogger", message);
+    },
+    SubscribeLog(adress) {
+      this.client.subscribe(this.options.username+'/'+adress, {qos: 1})
+      this.client.on('message', (topic, message)=> {
+        this.$store.dispatch("addToLogger", message)
+      })
+      }
   }
 };
 </script>

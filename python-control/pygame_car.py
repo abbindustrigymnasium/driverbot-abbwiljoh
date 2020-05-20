@@ -16,7 +16,7 @@ from pygame.locals import (
 SCREEN_WIDTH = 1280
 SCREEN_HEIGHT = 720
 
-log ='LOG'
+log ='ARROWKEYS - STEERING,  SPACE - STOP,  ESC - QUIT'
 
 print('Use arrowkeys to control car. SPACE to brake.\n ESC to exit')
 
