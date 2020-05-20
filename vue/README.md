@@ -1,5 +1,5 @@
 # Driverbot styrbas
-[Länk till Styrbasen på AWS](http://robodriver.s3.amazonaws.com/index.html)
+[Länk till originella hemsidan](http://robodriver.s3.amazonaws.com/index.html)
 
 ## Vad ingår
 Dessa komponenter ingår i denna robotstyrbas
