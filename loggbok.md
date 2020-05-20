@@ -73,3 +73,5 @@ Har jobbat med beräkningar och ellära. Fortsättningen på Kirchhoffs och Ohms
 
 ---
 
+## Måndag 18/5 (14.35-16.10)
+Ellära och beräkningar. Det gick bra, skönt med en lugn beräkningslektion efter kursprovet in matematik.
