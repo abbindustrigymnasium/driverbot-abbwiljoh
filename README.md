@@ -20,7 +20,7 @@ pip install pygame
 ```
 
 ### Hemsida för styrning:
-[Länk](https://www.youtube.com/watch?v=dQw4w9WgXcQ "Hemsidan är ännu ej uppe!")
+[Länk](https://www.youtube.com/watch?v=dQw4w9WgXcQ "Hemsidan är ännu ej uppe!") (Hemsidan är ej ännu uppe!)
 
 #### Externt innehåll:
   * [Pythonprojekt](https://github.com/abbindustrigymnasium/programmering-1-miniprojekt-abbwiljoh "Valsimulator")
