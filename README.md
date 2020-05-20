@@ -37,10 +37,14 @@ pip install paho-mqtt
 pip install pygame
 ```
 Pythonstyrningen var en idé jag fick efter att ha sett olika versioner av tetris och andra klassiska spel återskapade med pygame. Jag undrade om jag kunde få ett spel interagera med verkligheten, vilket det visade sig att jag kunde. En annan stor anledning var att jag gärna ville ha tillgång till piltangenterna, eftersom det skulle göra styrningen mycket smidigare ään att behöva dra en mus över skärmen. För att uppnå detta har jag följt dokumentationer och artiklar om hur Pygame och Paho-MQTT fungerar för python. Det är inte ett imponerande spel, men det fyller sin funktion och det fyller den väl.
+![alt_text](https://raw.githubusercontent.com/abbindustrigymnasium/driverbot-abbwiljoh/master/Bilder/Cargame_bild.jpg "`Spelet´")
 
 ### Hemsida/Vue-styrning
+![alt_text](https://raw.githubusercontent.com/abbindustrigymnasium/driverbot-abbwiljoh/master/Bilder/Startsida_bild.jpg "Startsida")
+
 To be continued...
 
+![alt_text](https://raw.githubusercontent.com/abbindustrigymnasium/driverbot-abbwiljoh/master/Bilder/Logger_bild.jpg "Styrsida + logger")
 ....
 ....
 
