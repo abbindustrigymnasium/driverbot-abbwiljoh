@@ -45,8 +45,7 @@ Pythonstyrningen var en idé jag fick efter att ha sett olika versioner av tetri
 To be continued...
 
 ![alt_text](https://raw.githubusercontent.com/abbindustrigymnasium/driverbot-abbwiljoh/master/Bilder/Logger_bild.jpg "Styrsida + logger")
-....
-....
+##### [CSS Gradient Generator](https://cssgradient.io "Här finns riktigt snygga övergångsfärger!")
 
 ### Problem
 * Servot
