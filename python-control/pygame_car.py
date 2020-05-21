@@ -47,7 +47,6 @@ class Player(pygame.sprite.Sprite):
             m.publish(msg='r90')
         if pressed_keys[K_SPACE]:
             self.rect.center = (SCREEN_WIDTH/2, SCREEN_HEIGHT/2)
-            log = 'Stannad'
             m.publish(msg= 'f0')
         
             
