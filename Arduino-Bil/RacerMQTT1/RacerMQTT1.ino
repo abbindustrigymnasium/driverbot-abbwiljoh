@@ -98,7 +98,7 @@ void drive(bool dir, int speed) {
   }
   else {
   Serial.println("Stannad");
-  client.publish(address+"direction","Bil: Stannad");
+  client.publish(address+"directionlog","Bil: Stannad");
   }
 }
 
@@ -136,11 +136,6 @@ void onConnectionEstablished()
 
 
 void loop() {
-
-
   // put your main code here, to run repeatedly:
   client.loop();
 }
-
-
-// Få in en reverse turn funktion för att  backa och svänga samtidigt
