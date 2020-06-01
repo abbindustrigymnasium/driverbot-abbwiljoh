@@ -53,7 +53,14 @@ To be continued...
 ![alt_text](https://raw.githubusercontent.com/abbindustrigymnasium/driverbot-abbwiljoh/master/Bilder/Logger_bild.jpg "Styrsida + logger")
 ##### [CSS Gradient Generator](https://cssgradient.io "Här finns riktigt snygga övergångsfärger!")
 
-### Problem
-* Servot
-* Motorn <800
+### Problem & Svårigheter
+* Servoplacering
+  - Servot fungerar väl, och har nog med styrka och grepp för att kunna svänga väl. Problemet är att den printade delen som håller servot på plats på legot, men något jag inte tänkte på var mellanrummet mellan hålen. Detta har gjort att servot sitter förskjutet ett steg åt höger, den är inte centrerad. Detta gör att det blir svårare för servot att får hjulen att snurra och att den del som kopplar servot till axeln hoppar av efter några svängar.
+  Några lösningar till detta problem skulle kunna vara att:
+    - Rita om delen och båda sidor med det avstånd som behövs (7.97/2 mm per sida) så att den är centrerad.
+    - Bygga en anordning där servot hänger fritt och kan justeras åt sidan för att centrera axeln.
+   
+* Svag motor:
+  - Den analoga signal som går till motorn måste vara över ~850, annars står motorn bara och tjuter utan att göra något. Detta har dock åtgärdats rätt så enkelt genom att:
+    - Begränsa hastigheten från 850-1000 i koden (utan att förstöra möjligheten att skicka nollvärden).
 * ...?
