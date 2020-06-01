@@ -6,8 +6,8 @@ Servo servo;
 void onConnectionEstablished();
 
 EspMQTTClient client(
-  "famjohansson",                                    // Wifi ssid
-  "Nyttis98",                                       // Wifi password
+  "",                                                // Wifi ssid
+  "",                                               // Wifi password
   "maqiatto.com",                                  // MQTT broker ip
   1883,                                           // MQTT broker port
   "william.johansson@abbindustrigymnasium.se",   // MQTT username
