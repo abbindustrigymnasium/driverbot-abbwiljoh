@@ -16,7 +16,7 @@
             color="teal"
             icon
             :disabled="!connected"
-            @click="Send('direction','l45'); SubscribeLog('direction');"
+            @click="Send('direction','l45'); SubscribeLog('directionlog');"
           >
             <v-icon>keyboard_arrow_left</v-icon>
           </v-btn>
@@ -27,7 +27,7 @@
             color="teal"
             icon
             :disabled="!connected"
-            @click="Send('direction','f'+speed); SubscribeLog('direction');"
+            @click="Send('direction','f'+speed); SubscribeLog('directionlog');"
           >
             <v-icon>keyboard_arrow_up</v-icon>
           </v-btn>
@@ -38,7 +38,7 @@
             color="teal"
             icon
             :disabled="!connected"
-            @click="Send('direction','r45'); SubscribeLog('direction');"
+            @click="Send('direction','r45'); SubscribeLog('directionlog');"
           >
             <v-icon>keyboard_arrow_left</v-icon>
           </v-btn>
@@ -58,7 +58,7 @@
             color="teal"
             icon
             :disabled="!connected"
-            @click="Send('direction','l90'); SubscribeLog('direction');"
+            @click="Send('direction','l90'); SubscribeLog('directionlog');"
           >
             <v-icon>keyboard_arrow_left</v-icon>
           </v-btn>
@@ -67,7 +67,7 @@
           <v-btn v-if="!connected" class="ma-2" tile large :color="car" icon @click="Connect()">
             <v-icon>directions_car</v-icon>
           </v-btn>
-          <v-btn v-else class="ma-2" tile large :color="car" icon @click="Send('direction','f0'); SubscribeLog('direction');">
+          <v-btn v-else class="ma-2" tile large :color="car" icon @click="Send('direction','f0'); SubscribeLog('directionlog');">
             <v-icon>pause</v-icon>
           </v-btn>
         </v-flex>
@@ -79,7 +79,7 @@
             color="teal"
             icon
             :disabled="!connected"
-            @click="Send('direction','r90'); SubscribeLog('direction');"
+            @click="Send('direction','r90'); SubscribeLog('directionlog');"
           >
             <v-icon>keyboard_arrow_right</v-icon>
           </v-btn>
@@ -98,7 +98,7 @@
             color="teal"
             icon
             :disabled="!connected"
-            @click="Send('direction','l135'); SubscribeLog('direction');"
+            @click="Send('direction','l135'); SubscribeLog('directionlog');"
           >
             <v-icon>keyboard_arrow_down</v-icon>
           </v-btn>
@@ -109,7 +109,7 @@
             color="teal"
             icon
             :disabled="!connected"
-            @click="Send('direction','b'+speed); SubscribeLog('direction');"
+            @click="Send('direction','b'+speed); SubscribeLog('directionlog');"
           >
             <v-icon>keyboard_arrow_down</v-icon>
           </v-btn>
@@ -120,7 +120,7 @@
             color="teal"
             icon
             :disabled="!connected"
-            @click="Send('direction','r135'); SubscribeLog('direction');"
+            @click="Send('direction','r135'); SubscribeLog('directionlog');"
           >
             <v-icon>keyboard_arrow_up</v-icon>
           </v-btn>

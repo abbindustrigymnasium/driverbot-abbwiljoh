@@ -53,7 +53,7 @@ void turn(bool left, int degrees) {
     }
     servo.write(degrees);
     Serial.println("Åker Höger!");
-    client.publish(address+"direction","Bil: Åker Höger!");
+    client.publish(address+"directionlog","Bil: Åker Höger!");
   }
   else
   {
@@ -67,7 +67,7 @@ void turn(bool left, int degrees) {
     }
     servo.write(degrees);
     Serial.println("Åker Vänster");
-    client.publish(address+"direction","Bil: Åker Vänster!");
+    client.publish(address+"directionlog","Bil: Åker Vänster!");
   }
 
 
@@ -94,7 +94,7 @@ void drive(bool dir, int speed) {
   }
   if (speed>0){
   Serial.println("Åker "+Direction+" med hastighet "+ speed);
-  client.publish(address+"direction","Bil: Åker "+Direction+" med hastighet "+ speed);
+  client.publish(address+"directionlog","Bil: Åker "+Direction+" med hastighet "+ speed);
   }
   else {
   Serial.println("Stannad");
@@ -109,10 +109,12 @@ void onConnectionEstablished()
   {
 
     char info = payload.charAt(0);
-    // char xdir = payload.charAt(1);
     int length = payload.length();
     String value = payload.substring(1, length);  // Ändra till 2
     int speed = value.toInt();
+    if (speed < 850){
+      speed = 850;
+    }
     if (info == 'f' || info == 'b'  )
     {
       bool dir = false;
@@ -128,6 +130,14 @@ void onConnectionEstablished()
       turn(dir, speed);
     }
     Serial.println(payload);
+
+    if(payload.indexOf("har anslutits") > 0){
+      client.publish(address + 'direction', payload);
+      digitalWrite(LED_BUILTIN, HIGH);
+      delay(1000);
+      digitalWrite(LED_BUILTIN, LOW);
+      client.publish(address + 'directionlog', payload);
+    }
 
   });
 
