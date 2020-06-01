@@ -36,29 +36,29 @@ void setup() {
 }
 
 //bool off = false;
-String address = "william.johansson@abbindustrigymnasium.se/";
-String Direction = "Framåt";
+String address = "william.johansson@abbindustrigymnasium.se/";  // Enklare för att använda mqtt
+String Direction = "Framåt"; // Används i meddelanden
 
 
-void turn(bool left, int degrees) {
-  if (left == true)
+void turn(bool right, int degrees) {
+  if (right == true)
   { 
-    degrees -= 90;
+    degrees -= 90;  // Servot på min bil är uppochned så höger är negativ riktning i vårt fall.
 
-    if (degrees < 0)
+    if (degrees < 0) // Om servot svänger för mycket kan det skadas när det möts av motstånd från svängmekanismen.
     {
       degrees = 0;
-      digitalWrite(motorPinDir, 1);
-      analogWrite(motorPinSpeed, 900);
+      digitalWrite(motorPinDir, 1); // Bilen kör framåt när den svänger som standard, men den kan backa och svänga samtidigt
+      analogWrite(motorPinSpeed, 900); // Bilen saktar ned i svängarna
     }
-    servo.write(degrees);
+    servo.write(degrees); // Servot svänger alltså ett visst antal grader till höger
     Serial.println("Åker Höger!");
-    client.publish(address+"directionlog","Bil: Åker Höger!");
+    client.publish(address+"directionlog","Bil: Åker Höger!");  //Skickar ett meddelande till loggern på hemsidan
   }
   else
   {
-
-    degrees += 90;
+                      //| |                                           | |
+    degrees += 90;    //v v   Samma som höger, fast åt andra hållet   v v
     if (degrees > 180)
     {
       degrees = 180;
@@ -73,79 +73,78 @@ void turn(bool left, int degrees) {
 
 }
 
-void drive(bool dir, int speed) {
+void drive(bool dir, int speed) { // dir = Framåt eller bakåt?  speed= hastighet
 
-  //Om du vill åka rakt fram eller bak
+  //Om du vill åka rakt fram eller bak återställs servot till utgångspositionen (rakt)
   servo.write(90);
 
   Serial.println("Åk!");
 
   Serial.println(speed);
   digitalWrite(motorPinDir, dir);
-  analogWrite(motorPinSpeed, speed);
+  analogWrite(motorPinSpeed, speed);    //Ganska enkelt, framåt/bakåt och hastighet
 
-  digitalWrite(LED_BUILTIN, dir);
+  digitalWrite(LED_BUILTIN, dir);   // En liten "billykta"
 
-  if (!dir){
+  if (!dir){              // Om dir är false backar bilen och då vill vi att den ska säga det
     Direction= "Bakåt";
   }
-  else if (dir){
+  else if (dir){          // Det fanns en bugg där bilen sa att den backade hela tiden, denna rad är här för att förhindra det
     Direction = "Framåt";
   }
   if (speed>0){
   Serial.println("Åker "+Direction+" med hastighet "+ speed);
-  client.publish(address+"directionlog","Bil: Åker "+Direction+" med hastighet "+ speed);
+  client.publish(address+"directionlog","Bil: Åker "+Direction+" med hastighet "+ speed);   //Skickar till loggern på hemsidan
   }
   else {
   Serial.println("Stannad");
-  client.publish(address+"directionlog","Bil: Stannad");
+  client.publish(address+"directionlog","Bil: Stannad");    //Skickar när den är stannad till loggern
   }
 }
 
 void onConnectionEstablished()
 {
 
-  client.subscribe(address+"direction", [] (const String & payload)
-  {
+  client.subscribe(address+"direction", [] (const String & payload)  
+  {           //För att få in instruktionerna från hemsidan
 
-    char info = payload.charAt(0);
+    char info = payload.charAt(0);    //I exemplet f1000 är "f" den första charen som säger framåt, bakåt, höger, vänster
     int length = payload.length();
-    String value = payload.substring(1, length);  // Ändra till 2
-    int speed = value.toInt();
-    if (speed < 850){
+    String value = payload.substring(1, length);  //I f1000 är "1000" den hastighet eller gradtal vi vill veta
+    int speed = value.toInt();    // Måste ha en int för funktionerna.
+    if (speed < 850){         // Om hastigheten är under ~850 tjuter bara motorn och rör sig inte, därför måste hastigheten vara högre
       speed = 850;
     }
-    if (info == 'f' || info == 'b'  )
+    if (info == 'f' || info == 'b'  ) //Framåt eller bakåt
     {
       bool dir = false;
       if (info == 'f'){
         dir = true;}
-      drive(dir, speed);
+      drive(dir, speed);    //Kallar funktionen för att köra framåt eller bakåt med en viss hastighet
     }
-    else if (info == 'r' || info == 'l'  )
+    else if (info == 'r' || info == 'l'  ) //Höger eller vänster
     {
       bool dir = false;
       if (info == 'r'){
         dir = true;}
-      turn(dir, speed);
+      turn(dir, speed); // Kallar funktionen för att svänga
     }
     Serial.println(payload);
 
-    if(payload.indexOf("har anslutits") > 0){
-      client.publish(address + 'direction', payload);
+    if(payload.indexOf("har anslutits") > 0){             //Letar i meddelandet efter anslutningsmeddelandet från hemsidan
       digitalWrite(LED_BUILTIN, HIGH);
       delay(1000);
       digitalWrite(LED_BUILTIN, LOW);
-      client.publish(address + 'directionlog', payload);
+      client.publish(address + 'directionlog', payload);  //Skickar meddelande till hemsidan så att man vet att bilen är ansluten!
     }
 
   });
 
-  client.publish(address + "direction", "This is a message");
+  client.publish(address + "direction", "Bil: Hej från bilen");
 }
 
 
 void loop() {
   // put your main code here, to run repeatedly:
-  client.loop();
+  client.loop();      //Processen loopar
 }
