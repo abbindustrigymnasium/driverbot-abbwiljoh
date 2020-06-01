@@ -50,7 +50,11 @@ Pythonstyrningen var en idé jag fick efter att ha sett olika versioner av tetri
 ### Hemsida/Vue-styrning
 ![alt_text](https://raw.githubusercontent.com/abbindustrigymnasium/driverbot-abbwiljoh/master/Bilder/Startsida_bild.jpg "Startsida")
 
-To be continued...
+Hemsidan är gjord med hjälp av Vue, och bygger starkt på den kod som kan hittas [här](https://github.com/abbindustrigymnasium/Driverbot/tree/master/Hemsida "Driverbot"). Grunden till hemsidan fungerar mycket väl, så jag har inte gjort så många ändringar när det kommer till de grundläggande funktionella, men jag har lagt till vissa saker som ska förbättra funktionen och gör hemsidan lite snyggare. 
+
+Man börjar på startsidan, där man möts av en knapp där man kan välja att ansluta. Klickar man den och anslutningen till MQTT-brokern lyckas kommer man vidare till styrsidan, som består av en kontrollpanel och en logger. Kontrollpanelen är ganska enkel att förstå: Klickar du framåt så åker bilen framåt! Det viktigaste jag tycker jag har bidragit med är ```SubscribeLog()```, en funktion som tar meddelanden från bilen och lägger till dem i loggern, vilket inte skedde i den ursprungliga hemsidan.
+
+Jag har inte jobbat med Vue så mycket under våra projekt, jag har mest hållit på i backenden och "lekt" med arduinokod, så det här blir mitt första officella projekt med Vue. Ja, jag kunde ha gjort en hemsida från grunden,och den hade antagligen haft de grundläggande funktioner som behövs för bilen. Men att använda en grund har gett mig lite bättre förståelse för hur Vue fungerar, och jag tror inte jag skulle kunnat fördjupa mig med en hemsida gjord från grunden, så i slutändan är jag ändå nöjd med det jag gjort.
 
 ![alt_text](https://raw.githubusercontent.com/abbindustrigymnasium/driverbot-abbwiljoh/master/Bilder/Logger_bild.jpg "Styrsida + logger")
 ##### [CSS Gradient Generator](https://cssgradient.io "Här finns riktigt snygga övergångsfärger!")
@@ -65,4 +69,3 @@ To be continued...
 * Svag motor:
   - Den analoga signal som går till motorn måste vara över ~850, annars står motorn bara och tjuter utan att göra något. Detta har dock åtgärdats rätt så enkelt genom att:
     - Begränsa hastigheten från 850-1000 i koden (utan att förstöra möjligheten att skicka nollvärden).
-* ...?
