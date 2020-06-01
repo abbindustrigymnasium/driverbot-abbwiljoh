@@ -15,6 +15,11 @@
 ### Hemsida för styrning:
 [Länk](https://www.youtube.com/watch?v=dQw4w9WgXcQ "Hemsidan är ännu ej uppe!") (Hemsidan är ej ännu uppe!)
 
+### Kommenterad kod:
+Eftersom det finns så många filer har jag endast kommenterat de viktigaste filerna och dem jag jobbat som mest med. De finns här:
+  * [Arduinokod](https://github.com/abbindustrigymnasium/driverbot-abbwiljoh/blob/master/Arduino-Bil/RacerMQTT1/RacerMQTT1.ino "RacerMQTT1")
+  * 
+
 ### Externt innehåll:
   * [Pythonprojekt](https://github.com/abbindustrigymnasium/programmering-1-miniprojekt-abbwiljoh "Valsimulator")
   
