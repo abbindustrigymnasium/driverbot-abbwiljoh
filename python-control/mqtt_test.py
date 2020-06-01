@@ -1,4 +1,4 @@
-import paho.mqtt.client as mqtt
+import paho.mqtt.client as mqtt # http://www.steves-internet-guide.com/into-mqtt-python-client/ och https://pypi.org/project/paho-mqtt/
 import time
 
 def on_connect(client, userdata, flags, rc):
@@ -22,7 +22,7 @@ broker = 'maqiatto.com'
 client = mqtt.Client(client_id='hejHEJ', transport='websockets')
 
 client.ws_set_options()
-client.username_pw_set(username='william.johansson@abbindustrigymnasium.se', password='creativetalk')
+client.username_pw_set(username='william.johansson@abbindustrigymnasium.se', password='creativetalk')   #Olika credentials
 client.will_set('william.johansson@abbindustrigymnasium.se/direction', 'f0')
 
 client.on_connect= on_connect   #Callback funktioner,kallade
@@ -36,7 +36,7 @@ client.connect(host = broker, port=8883)
 client.loop_start()
 client.publish('william.johansson@abbindustrigymnasium.se/direction', 'f0')
 
-def publish(prefix= 'william.johansson@abbindustrigymnasium.se',topic= '/direction', msg= 'f0'):
+def publish(prefix= 'william.johansson@abbindustrigymnasium.se',topic= '/direction', msg= 'f0'):    #Funktion för att enkelt kunna publish med mqtt
     client.publish(prefix+topic, msg)
 
 

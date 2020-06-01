@@ -1,5 +1,5 @@
 import pygame
-import mqtt_test as m
+import mqtt_test as m #Använder en testfil med mqtt-funktioner, med hjälp av http://www.steves-internet-guide.com/into-mqtt-python-client/
 from pygame.locals import (
     RLEACCEL,
     K_SPACE,
@@ -20,7 +20,7 @@ log ='ARROWKEYS - STEERING,  SPACE - STOP,  ESC - QUIT'
 
 print('Use arrowkeys to control car. SPACE to brake.\n ESC to exit')
 
-class Player(pygame.sprite.Sprite):
+class Player(pygame.sprite.Sprite):     #"Spaken" som ska röra sig
     def __init__(self):
         super(Player, self).__init__()
         self.surf = pygame.image.load('python-control/red_circle.png').convert()
@@ -28,7 +28,7 @@ class Player(pygame.sprite.Sprite):
         self.rect = self.surf.get_rect()
         self.rect.center = (SCREEN_WIDTH/2, SCREEN_HEIGHT/2)
 
-    def update(self, pressed_keys):
+    def update(self, pressed_keys):             # Vad ska koden göra vid olika knapptryck?
         if pressed_keys[K_UP]:
             self.rect.center = (SCREEN_WIDTH/2, SCREEN_HEIGHT/2)
             self.rect.center = (SCREEN_WIDTH/2, SCREEN_HEIGHT/2 - 50)
@@ -52,7 +52,7 @@ class Player(pygame.sprite.Sprite):
             
 pygame.init()
 
-screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT)) #Fönstrets storlek och namn
 pygame.display.set_caption('Car Controller')
 
 
@@ -67,7 +67,7 @@ clock = pygame.time.Clock()
 
 while running:
     for event in pygame.event.get():
-        if event.type == KEYDOWN:
+        if event.type == KEYDOWN:           # Lägger till olika värden i loggern
             if event.key == K_ESCAPE:
                 running = False
             if event.key == K_UP:
@@ -89,15 +89,15 @@ while running:
 
     screen.fill((200,200,200))
     font = pygame.font.Font('freesansbold.ttf', 18)
-    text = font.render(log , True, (255,255,255), (0,0,0))
+    text = font.render(log , True, (255,255,255), (0,0,0))          #Lägger till loggern
     textRect = text.get_rect()
     textRect.center = (SCREEN_WIDTH/2, SCREEN_HEIGHT*0.8)
     screen.blit(text, textRect)
 
-    Surf = pygame.Surface((300,300))
+    Surf = pygame.Surface((300,300))        #Lägger till joystickens grå bas
     Surf.fill((20,20,20))
     Surf_center = (
-        (SCREEN_WIDTH-Surf.get_width())/2,
+        (SCREEN_WIDTH-Surf.get_width())/2,  #I mitten av skärmen
         (SCREEN_HEIGHT-Surf.get_height())/2
     )
     screen.blit(Surf, Surf_center)
@@ -106,6 +106,6 @@ while running:
         screen.blit(entity.surf, entity.rect)
     
     pygame.display.flip()
-    clock.tick(30)
+    clock.tick(30)      #tick speed gör rörelserna mer konstanta
 
-m.client.disconnect()
+m.client.disconnect() #Disconnect för att inte ta upp plats
