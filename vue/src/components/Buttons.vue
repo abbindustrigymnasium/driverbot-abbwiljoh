@@ -4,7 +4,7 @@
     <v-card class="elevation-12" color="grey lighten-1">
       <v-layout row>
         <v-flex class="justify-center mb-6">
-          <v-btn class="ma-2" v-if="connected" tile color="red" icon @click="speed=850">
+          <v-btn class="ma-2" v-if="connected" tile color="red" icon @click="speed=850"> <!-- hastighetsknapp -->
             85
             <v-icon>directions_car</v-icon>
           </v-btn>
@@ -15,8 +15,8 @@
             color="teal"
             icon
             :disabled="!connected"
-            @click="Send('direction','f'+speed); SubscribeLog('directionlog');"
-          >
+            @click="Send('direction','f'+speed); SubscribeLog('directionlog');" 
+          > <!-- ^^^ Varje framåt/bakåt/vänster/höger-knappar kallar samma funktioner: För att skicka MQTT-meddelande och för att få svar från bilen. -->
             <v-icon>keyboard_arrow_up</v-icon>
           </v-btn>
 
@@ -106,13 +106,13 @@ export default {
       car: "green",
       clientId: "notyetAssigned",
       client: null,
-      speed: 600,
+      speed: 850,
       ticklabels: ["Långsamt", "Snabbare", "Snabbast"],
       options: {}
     };
   },
   computed: {
-    Disconnect() {
+    Disconnect() {    //Här är en funktion som kallas från html-delen, som i sin tur kallar en funktion i store.js
       if (this.$store.getters.connected == false) {
         return true;
       }
@@ -141,12 +141,12 @@ export default {
       }
       let User = this.$store.getters.GetUser;
       this.clientId =
-        "WilliamBilKontroll" +
+        "WilliamBilKontroll" +      //ClientID måste vara unikt så några siffror randomiseras för ID:t
         Math.random()
           .toString(16)
           .substr(2, 8);
       var mqtt_url = User.adress;
-      var url = "mqtt://" + mqtt_url;
+      var url = "mqtt://" + mqtt_url;     //Lite fler credentials för ansluta till MQTT
       var options = {
         port: User.port,
         clientId: this.clientId,
@@ -167,7 +167,7 @@ export default {
           // console.log("error");
           ref.Connecting(false);
         })
-        .on("close", function() {
+        .on("close", function() {     //Så man inte är connectad om anslutningen bryts.
           ref.Connecting(false);
           // console.log("closing");
         });
@@ -178,14 +178,14 @@ export default {
       this.$store.dispatch("Connect", connected);
       // console.log(this.connected)
       if (connected == false) {
-        this.car = "red";
+        this.car = "red";             //Om bilen inte anslutits blir bilikonen röd
       } else {
         this.car = "blue";
         this.Send("direction", this.clientId + " har anslutits.");
       }
     },
 
-    Send(adress, message) {
+    Send(adress, message) {     //Publicerar till MQTT
       // console.log(message);
       this.client.publish(
         this.options.username + "/" + adress,
@@ -194,9 +194,9 @@ export default {
 
       // this.$store.dispatch("addToLogger", message);
     },
-    SubscribeLog(adress) {
-      this.client.subscribe(this.options.username+'/'+adress, {qos: 1})
-      this.client.on('message', (topic, message)=> {
+    SubscribeLog(adress) {    //Mitt viktigaste tillägg till hemsidan:
+      this.client.subscribe(this.options.username+'/'+adress, {qos: 1}) //Funktion för att läsa av och lägga till MQTT-meddelanden från bilen
+      this.client.on('message', (topic, message)=> {                   //och lägger till meddelandet i loggern.
         this.$store.dispatch("addToLogger", message)
       })
       }

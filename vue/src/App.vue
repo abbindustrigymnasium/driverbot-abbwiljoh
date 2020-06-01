@@ -36,7 +36,7 @@
             </v-card-actions>
           </v-card>
         </v-dialog>
-
+                                  <!-- En liten flik där man kan lägga till egna credentials -->
         <div>
           <Logger />
 
@@ -64,14 +64,14 @@ export default {
     return {
       Switch: false,
       dialog: false,
-      name: "",
+      name: "",       //Information för fliken
       password: "",
       port: "",
       adress: ""
     };
   },
   created() {
-    let User = this.$store.getters.GetUser;
+    let User = this.$store.getters.GetUser;   //MQTT-Credentials för hemsidan från store.js
     this.name = User.name;
     this.password = User.password;
     this.port = User.port;
@@ -87,7 +87,7 @@ export default {
         adress: this.adress
       };
 
-      this.$store.dispatch("Save", User);
+      this.$store.dispatch("Save", User);   //Sparar användaren
 
       this.dialog = false;
     }
@@ -114,7 +114,7 @@ export default {
 }
 
 /* https://beautifuldingbats.com/pattern-generator/ https://css-tricks.com/using-svg/ */
-/* Gradient beackgrounds: https://cssgradient.io */
+/* Gradient beackgrounds: https://cssgradient.io  Väldigt snygga gradient*/ 
 #toolbar {
   /* background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj48ZGVmcz48cGF0dGVybiBpZD0icGF0dGVybiIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgcGF0dGVyblRyYW5zZm9ybT0icm90YXRlKDM2MCkiPjxyZWN0IGlkPSJwYXR0ZXJuLWJhY2tncm91bmQiIHg9IjAiIHk9IjAiIHdpZHRoPSI0MDAlIiBoZWlnaHQ9IjQwMCUiIGZpbGw9InRyYW5zcGFyZW50Ii8+ICA8IS0tLS0+IDwhLS0tLT4gPHBhdGggZD0ibSAwIDEwIGggNDAiIHN0cm9rZS13aWR0aD0iMjAiIHN0cm9rZT0iI2ZmZTA2NiIgc2hhcGUtcmVuZGVyaW5nPSJhdXRvIiBzdHJva2UtbGluZWNhcD0iYnV0dCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZmlsbD0idHJhbnNwYXJlbnQiLz4gICAgPCEtLS0tPiA8IS0tLS0+IDxwYXRoIGQ9Im0wLDAgTDQwLDQwIiBzdHJva2Utd2lkdGg9IjIwIiBzdHJva2U9IiNmZjZiNmIiIHNoYXBlLXJlbmRlcmluZz0iYXV0byIgc3Ryb2tlLWxpbmVjYXA9InNxdWFyZSIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZmlsbD0idHJhbnNwYXJlbnQiLz48cGF0aCBkPSJtNDAsMCBMODAsNDAiIHN0cm9rZS13aWR0aD0iMjAiIHN0cm9rZT0iI2ZmNmI2YiIgc2hhcGUtcmVuZGVyaW5nPSJhdXRvIiBzdHJva2UtbGluZWNhcD0ic3F1YXJlIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBmaWxsPSJ0cmFuc3BhcmVudCIvPjxwYXRoIGQ9Im0tNDAsMCBMMCw0MCIgc3Ryb2tlLXdpZHRoPSIyMCIgc3Ryb2tlPSIjZmY2YjZiIiBzaGFwZS1yZW5kZXJpbmc9ImF1dG8iIHN0cm9rZS1saW5lY2FwPSJzcXVhcmUiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGZpbGw9InRyYW5zcGFyZW50Ii8+ICAgPC9wYXR0ZXJuPjwvZGVmcz4gPHJlY3QgZmlsbD0idXJsKCNwYXR0ZXJuKSIgaGVpZ2h0PSIxMDAlIiB3aWR0aD0iMTAwJSIgeT0iMCIgeD0iMCIvPjwvc3ZnPg==")
   } */

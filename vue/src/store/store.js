@@ -4,7 +4,7 @@ Vue.use(Vuex)
 
 // root state object.
 // each Vuex instance is just a single state tree.
-const state = {
+const state = {                           // Credentials för mqtt som används överallt
   loadingStatus: "not loading",
   // logger:"",
   logger: [],
@@ -23,25 +23,25 @@ const state = {
 // first argument, followed by additional payload arguments.
 // mutations must be synchronous and can be recorded by plugins
 // for debugging purposes.
-const mutations = {
+const mutations = {                 //Jag tror de flesta mutationerna är självföklarande:
   Loading_Status(state, Status) {
-    state.loadingStatus = Status;
+    state.loadingStatus = Status;   // Man vill veta loadingstatus 
   },
-  clear_Logger(state) {
+  clear_Logger(state) {             // Funktion för att tömma loggerns meddelandearray
     // state.logger = "";
     state.logger = [];
   },
-  Connect_(state, status) {
+  Connect_(state, status) {         //Förstås för att ansluta till mqtt
     state.connect = status;
   },
-  Set_User(state, data) {
+  Set_User(state, data) {           //Credentials
     state.user = data;
   },
-  add_To_Logger(state, text) {
-    if (state.loglimit <= state.logger.length) {
+  add_To_Logger(state, text) {                    //Denna är intressant, man lägger till meddelanden i loggern
+    if (state.loglimit <= state.logger.length) {    
       state.logger.shift();
     }
-    state.logger.push(text);
+    state.logger.push(text);        // Används mest för att lägga till MQTT-meddelanden som kan ses i Buttons och Buttonsv2
     // state.logger += text;
   },
   Save_: (state, user) => {
@@ -52,7 +52,7 @@ const mutations = {
 
 // actions are functions that cause side effects and can involve
 // asynchronous operations.
-const actions = {
+const actions = {     //Så att funktionerna kan kallas, i till exempel Buttons.vue 
   LoadingStatus: ({
     commit
   }, Status) => {
@@ -101,7 +101,7 @@ const getters = {
 
 // A Vuex instance is created by combining the state, mutations, actions,
 // and getters.
-export default new Vuex.Store({
+export default new Vuex.Store({     //Alla funktioner exporteras för att kunna användas på hela hemsidan.
   state,
   getters,
   actions,
