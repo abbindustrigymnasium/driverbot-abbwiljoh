@@ -19,7 +19,9 @@
 Eftersom det finns så många filer har jag endast kommenterat de viktigaste filerna och dem jag jobbat som mest med. De finns här:
   * [Arduinokod](https://github.com/abbindustrigymnasium/driverbot-abbwiljoh/blob/master/Arduino-Bil/RacerMQTT1/RacerMQTT1.ino "RacerMQTT1")
   * [Joystick](https://github.com/abbindustrigymnasium/driverbot-abbwiljoh/tree/master/python-control "Python-Stryning")
-  *
+  * [Store](https://github.com/abbindustrigymnasium/driverbot-abbwiljoh/blob/master/vue/src/store/store.js "store.js")
+  * [Buttons](https://github.com/abbindustrigymnasium/driverbot-abbwiljoh/blob/master/vue/src/components/Buttons.vue "Buttons.vue") (Det finns två versioner men jag tycker det räcker med en kommenterad fil.)
+  * [App](https://github.com/abbindustrigymnasium/driverbot-abbwiljoh/blob/master/vue/src/App.vue "App.vue")
 
 ### Externt innehåll:
   * [Pythonprojekt](https://github.com/abbindustrigymnasium/programmering-1-miniprojekt-abbwiljoh "Valsimulator")
