@@ -1,6 +1,6 @@
 import pygame
 import mqtt_test as m #Använder en testfil med mqtt-funktioner, med hjälp av http://www.steves-internet-guide.com/into-mqtt-python-client/
-from pygame.locals import (
+from pygame.locals import (         # Tar också hjälp av https://pypi.org/project/paho-mqtt/ 
     RLEACCEL,
     K_SPACE,
     K_UP,
@@ -13,10 +13,10 @@ from pygame.locals import (
     QUIT   
 )
 
-SCREEN_WIDTH = 1280
+SCREEN_WIDTH = 1280             #Hur stort fönstret ska vara
 SCREEN_HEIGHT = 720
 
-log ='ARROWKEYS - STEERING,  SPACE - STOP,  ESC - QUIT'
+log ='ARROWKEYS - STEERING,  SPACE - STOP,  ESC - QUIT'     # Utgångstext för loggern
 
 print('Use arrowkeys to control car. SPACE to brake.\n ESC to exit')
 
@@ -31,7 +31,7 @@ class Player(pygame.sprite.Sprite):     #"Spaken" som ska röra sig
     def update(self, pressed_keys):             # Vad ska koden göra vid olika knapptryck?
         if pressed_keys[K_UP]:
             self.rect.center = (SCREEN_WIDTH/2, SCREEN_HEIGHT/2)
-            self.rect.center = (SCREEN_WIDTH/2, SCREEN_HEIGHT/2 - 50)
+            self.rect.center = (SCREEN_WIDTH/2, SCREEN_HEIGHT/2 - 50)   # Vi vill att spaken ska flytta sig bort från mitten
             m.publish(msg='f1000')
         if pressed_keys[K_DOWN]:
             self.rect.center = (SCREEN_WIDTH/2, SCREEN_HEIGHT/2)
@@ -59,15 +59,15 @@ pygame.display.set_caption('Car Controller')
 
 player = Player()
 
-all_sprites = pygame.sprite.Group()
+all_sprites = pygame.sprite.Group()         # Sprite-grupper gör det enklare att använda sprites praktiskt
 all_sprites.add(player)
 
-running = True
+running = True                              # Bool för while-loopen
 clock = pygame.time.Clock()
 
 while running:
     for event in pygame.event.get():
-        if event.type == KEYDOWN:           # Lägger till olika värden i loggern
+        if event.type == KEYDOWN:           # Lägger till olika värden i loggern efter vilka knappar som tryckts
             if event.key == K_ESCAPE:
                 running = False
             if event.key == K_UP:
@@ -102,7 +102,7 @@ while running:
     )
     screen.blit(Surf, Surf_center)
 
-    for entity in all_sprites:
+    for entity in all_sprites:                  # Alla nödvändiga sprites ritas ut
         screen.blit(entity.surf, entity.rect)
     
     pygame.display.flip()
