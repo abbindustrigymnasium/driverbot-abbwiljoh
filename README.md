@@ -1,7 +1,8 @@
 # Driverbot-William Johansson
 
 ### Videogenomgång!
-[Redovisning av kod](https://www.youtube.com/watch?v=j-S3EtqVBAM&feature=youtu.be "YouTube")
+* [Redovisning av kod](https://www.youtube.com/watch?v=j-S3EtqVBAM&feature=youtu.be "YouTube")
+* [Redovisning av konstruktion](https://youtu.be/Zw0bGkSxXyo "YouTube")
 
 #### Innehåll:
    * [Kod för bil](https://github.com/abbindustrigymnasium/driverbot-abbwiljoh/blob/master/Arduino-Bil/RacerMQTT1/RacerMQTT1.ino "Racer MQTT1")
